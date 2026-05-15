@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod 753 chmod_every_thing
+mkdir -m 751 my_dir
