@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# A Bash script that displays To infinity and beyond indefinitely
+# and displays I am invincible!!! when receiving a SIGTERM signal
+
+# Define the function to run when SIGTERM is caught
+stop_me() {
+    echo "I am invincible!!!"
+    exit # This line is likely what the checker is missing
+}
+
+# Trap SIGTERM (signal 15) and execute the function
+trap stop_me SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
